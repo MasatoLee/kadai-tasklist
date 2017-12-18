@@ -1,6 +1,10 @@
 <h1>タスク新規作成ページ</h1>
 
-<%= form_for(@tasks) do |f| %>
+<%= form_for(@task) do |f| %>
+
+  <%= f.label :status, 'ステータス' %>
+  <%= f.text_field :status %>
+  
   <%= f.label :content, 'タスク' %>
   <%= f.text_field :content %>
 

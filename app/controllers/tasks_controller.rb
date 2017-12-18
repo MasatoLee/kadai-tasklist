@@ -15,7 +15,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     
-    if @task.save
+    if @ask.save
       flash[:success] = 'タスクが正常に投稿されました'
       redirect_to @task
     else 
@@ -54,5 +54,5 @@ end
 
   # Strong Parameter
   def task_params
-    params.require(:task).permit(:content)
+    params.require(:task).permit(:content, :status)
   end
