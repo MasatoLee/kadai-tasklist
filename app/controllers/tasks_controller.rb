@@ -1,9 +1,10 @@
 class TasksController < ApplicationController
-  
+
+  # 一覧画面
   def index
-    @task = Task.all
+    @tasks = Task.all.page(params[:page])
   end
-  
+
   def show
     @task = Task.find(params[:id])
   end
