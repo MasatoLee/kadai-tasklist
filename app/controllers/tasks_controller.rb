@@ -1,5 +1,5 @@
 class TasksController < ApplicationController
-  before_action :correct_user, only: [:show, :create, :edit, :update, :destroy]
+  before_action :correct_user, only: [:show, :edit, :update, :destroy]
 
   # 一覧画面
   def index
